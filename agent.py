@@ -5,8 +5,10 @@ import mlflow
 import os
 from databricks.sdk import WorkspaceClient
 
-
+# Configure MLflow tracing for Databricks Apps environment
+# Disable async export to avoid connection errors in restricted network environment
 mlflow.openai.autolog()
+os.environ['MLFLOW_ENABLE_ASYNC_LOGGING'] = 'false'
 
 host = os.environ.get('MLFLOW_TRACKING_URI')
 print(host)
