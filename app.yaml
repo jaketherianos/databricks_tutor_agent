@@ -1,0 +1,20 @@
+# Databricks App Configuration for Streamlit
+# https://docs.databricks.com/aws/en/dev-tools/databricks-apps/app-runtime
+
+command: ['streamlit', 'run', 'app.py']
+
+env:
+  # MLflow Configuration
+  - name: 'MLFLOW_TRACKING_URI'
+    value: 'databricks'
+  
+  - name: 'MLFLOW_EXPERIMENT_ID'
+    value: '2823590891747256'
+  
+  # Databricks Host (auto-detected in Databricks Apps environment)
+  # DATABRICKS_HOST is automatically set by Databricks Apps runtime
+  
+  # Databricks Token (auto-detected in Databricks Apps environment)
+  # DATABRICKS_TOKEN is automatically set by Databricks Apps runtime
+
+
