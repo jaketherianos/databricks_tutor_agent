@@ -1,14 +1,17 @@
 from dotenv import load_dotenv
 load_dotenv()  # Load environment variables from .env file
 
-import mlflow
 import os
+
+# MUST set these BEFORE importing mlflow to avoid async logging errors in Databricks Apps
+os.environ['MLFLOW_ENABLE_ASYNC_LOGGING'] = 'false'
+os.environ['MLFLOW_ENABLE_ASYNC_TRACE_LOGGING'] = 'false'
+
+import mlflow
 from databricks.sdk import WorkspaceClient
 
 # Configure MLflow tracing for Databricks Apps environment
-# Disable async export to avoid connection errors in restricted network environment
 mlflow.openai.autolog()
-os.environ['MLFLOW_ENABLE_ASYNC_LOGGING'] = 'false'
 
 host = os.environ.get('MLFLOW_TRACKING_URI')
 print(host)

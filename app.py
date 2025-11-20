@@ -14,6 +14,12 @@ MLflow Configuration:
   - Human feedback (thumbs up/down + rationale) is logged to the trace
 """
 
+import os
+
+# MUST set these BEFORE importing mlflow to avoid async logging errors in Databricks Apps
+os.environ['MLFLOW_ENABLE_ASYNC_LOGGING'] = 'false'
+os.environ['MLFLOW_ENABLE_ASYNC_TRACE_LOGGING'] = 'false'
+
 import streamlit as st
 import random
 from typing import Dict, Optional

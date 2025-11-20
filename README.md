@@ -2,6 +2,15 @@
 
 A complete implementation of an AI tutor agent with production-ready quality monitoring using MLflow 3 scorers.
 
+## 📸 App Preview
+
+![Small Tutor Agent UI](screenshots/app-ui.png)
+
+*The Streamlit web interface showing topic input, suggested topics, and three-level explanations (Beginner, Intermediate, Expert)*
+
+![Small Tutor Agent feedback UI](screenshots/feedback-ui.png)
+
+*The Streamlit web interface the allows human feedback collection along with the production traces*
 ## 🎯 Overview
 
 This project demonstrates:

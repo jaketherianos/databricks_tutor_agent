@@ -18,6 +18,9 @@ env:
   - name: 'MLFLOW_ENABLE_ASYNC_LOGGING'
     value: 'false'
   
+  - name: 'MLFLOW_ENABLE_ASYNC_TRACE_LOGGING'
+    value: 'false'
+  
   # Databricks Host (auto-detected in Databricks Apps environment)
   # DATABRICKS_HOST is automatically set by Databricks Apps runtime
   
