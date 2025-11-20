@@ -15,6 +15,10 @@ print(exp_id)
 tok = os.environ.get('DATABRICKS_TOKEN')
 print(tok)
 
+print(os.getenv('MLFLOW_TRACKING_URI'))
+print(os.getenv('MLFLOW_EXPERIMENT_ID'))
+print(os.getenv('DATABRICKS_HOST'))
+
 w = WorkspaceClient()
 client = w.serving_endpoints.get_open_ai_client()
 

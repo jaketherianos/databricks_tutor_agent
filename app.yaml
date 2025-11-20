@@ -8,6 +8,9 @@ env:
   - name: 'MLFLOW_TRACKING_URI'
     value: 'databricks'
   
+  - name: 'MLFLOW_REGISTRY_URI'
+    value: 'databricks-uc'
+
   - name: 'MLFLOW_EXPERIMENT_ID'
     value: '2823590891747256'
   
